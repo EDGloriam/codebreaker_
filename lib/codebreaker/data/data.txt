@@ -1,0 +1,11 @@
+==========
+Date: 2017-06-19 13:17:40 +0300
+Player: Alex
+Won game: false
+Spent attempts: 10
+==========
+Date: 2017-06-19 13:21:55 +0300
+Player: Alexander
+Won game: true
+Spent attempts: 13
+==========
