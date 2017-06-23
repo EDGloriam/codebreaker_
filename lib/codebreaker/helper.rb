@@ -8,4 +8,8 @@ module Helper
     end
     value
   end
+
+  def to_array(user_input)
+    user_input.split('').map(&:to_i)
+  end
 end

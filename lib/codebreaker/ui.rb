@@ -15,9 +15,9 @@ class Ui
     verify(params).to_i
   end
 
-  def user_input
+  def user_input(params)
     puts "Please, enter 4 numbers in range from 1 to 6 or type 'hint'"
-    gets.strip
+    verify(params)
   end
 
   def ask_position(params)
@@ -37,15 +37,19 @@ class Ui
     puts '(!)There are no hints any more'
   end
 
-  def show_result(plus, minus)
-    puts "#{plus}#{minus}"
+  def show_plus_minus(plus_minus)
+    puts plus_minus
   end
 
-  def congrats
+  def congratulations
     puts 'Congratulations, you breake the code!'
   end
 
-  def condolences(code)
+  # def sympathy
+  #   puts "Unfortunately, you lose. Secret code was"
+  # end
+
+  def sympathy(code)
     puts "Unfortunately, you lose. Secret code was : #{code}"
   end
 
@@ -54,9 +58,13 @@ class Ui
     verify(params)
   end
 
+  def set_name
+    puts 'Enter your name:'
+    gets.strip.capitalize
+  end
+
   def save?
     puts 'Would you like to save the result? (y/n)'
     return true if gets.strip.chomp == 'y'
-    false
   end
 end

@@ -1,11 +1,23 @@
 ==========
-Date: 2017-06-19 13:17:40 +0300
-Player: Alex
-Won game: false
-Spent attempts: 10
+Date: 2017-06-23 14:44:12 +0300
+Player: Dfg
+Won game: lose
 ==========
-Date: 2017-06-19 13:21:55 +0300
-Player: Alexander
-Won game: true
-Spent attempts: 13
+Date: 2017-06-23 14:46:08 +0300
+Player: Alex-first
+Won game: lose
 ==========
+Date: 2017-06-23 14:46:37 +0300
+Player: Alex-first
+Won game: lose
+Spent attempts: 0
+==========
+Date: 2017-06-23 14:48:53 +0300
+Player: Alex-sec
+Won game: lose
+Spent attempts: 9
+==========
+Date: 2017-06-23 14:50:16 +0300
+Player: Alex-third-win
+Won game: won
+Spent attempts: 7
