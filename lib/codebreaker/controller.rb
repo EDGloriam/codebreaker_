@@ -49,9 +49,7 @@ class Controller
   end
 
   def save
-    puts Dir.pwd
     if @ui.save?
-      puts Dir.pwd
       name = @ui.set_name
       File.open('data/data.txt', 'a') do |file|
         file.write("==========\nDate: #{Time.now}\n")
@@ -63,5 +61,5 @@ class Controller
   end
 end
 
-z = Controller.new
-z.start
+# z = Controller.new
+# z.start

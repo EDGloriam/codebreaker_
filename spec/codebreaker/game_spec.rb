@@ -14,9 +14,9 @@ module Codebreaker
         it { expect(secret_code.join).to match(/[1-6]/) }
       end
 
-      # it 'sets attempts to 0' do
-      #   expect(attempts).to be_zero
-      # end
+      it 'sets attempts to 0' do
+        expect(attempts).to be_zero
+      end
 
       it 'sets hint avaliable to true' do
         expect(hint_avaliable).to be true
@@ -34,19 +34,10 @@ module Codebreaker
 
    it 'replies correct' do
       test_data.each_with_index do |example, i|
-        puts "passed #{3+i}"
         cod = example[0].split('').map(&:to_i)
         @game.instance_variable_set(:@secret_code, cod)
         expect(@game.find_plus_minus(example[1])).to eq("#{example[2]}")
       end
-    end
-
-   xit 'replies correct. one example' do
-      exampl = %w[1115 1231 +-]
-      cod = exampl[0].split('').map(&:to_i)
-      @game.instance_variable_set(:@secret_code, cod)
-      # puts @game.find_plus_minus(exampl[1])
-      expect(@game.find_plus_minus(exampl[1])).to eq("#{exampl[2]}")
     end
 
   end
