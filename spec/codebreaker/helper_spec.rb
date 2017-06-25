@@ -1,18 +1,24 @@
-
 require './lib/codebreaker/helper'
 
-  RSpec.describe 'Helper' do
+RSpec.describe 'Helper' do
+  let(:params) { { matcher: '^[\d]+$', message: 'a number ' } }
+  class Test
     include Helper
-    describe '#verify' do
-      let(:params) {{ matcher: '^[\d]+$', message: 'a number '}}
+  end
+  subject { Test.new }
 
-      it "works. Return 10 if matcher requires a number"do
-        expect(verify(params)).to eq('10')
-      end
+  describe '#verify' do
+    it 'returns 10 if matcher requires a number' do
+      allow(subject).to receive(:gets).and_return('10')
+      expect(subject.verify(params)).to eq('10')
+    end
 
-      xit "raise an exception when incorrect input" do
-        # allow(subject). receive(:puts).with(any_args)
-         expect(verify(params)).to output("(!) Please, enter a number").to_stdout
-      end
+    it 'raise an exception when incorrect input'
+  end
+
+  describe '#to_array' do
+    it 'converts string into array' do
+      expect(subject.to_array('1234')).to eq([1, 2, 3, 4])
     end
   end
+end

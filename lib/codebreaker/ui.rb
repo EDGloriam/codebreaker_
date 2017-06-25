@@ -45,10 +45,6 @@ class Ui
     puts 'Congratulations, you breake the code!'
   end
 
-  # def sympathy
-  #   puts "Unfortunately, you lose. Secret code was"
-  # end
-
   def sympathy(code)
     puts "Unfortunately, you lose. Secret code was : #{code}"
   end

@@ -54,12 +54,9 @@ class Controller
       File.open('data/data.txt', 'a') do |file|
         file.write("==========\nDate: #{Time.now}\n")
         file.write("Player: #{name}\n")
-        file.write("Won game: #{@game.won}\n")
+        file.write("Game: #{@game.won}\n")
         file.write("Spent attempts: #{@game.attempts_spent}\n")
       end
     end
   end
 end
-
-# z = Controller.new
-# z.start

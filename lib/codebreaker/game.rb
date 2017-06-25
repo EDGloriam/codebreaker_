@@ -3,7 +3,7 @@ require_relative 'helper'
 module Codebreaker
   class Game
     include Helper
-    attr_accessor :attempts_left, :won, :attempts_spent
+    attr_accessor :attempts_left, :won, :attempts_spent, :hint_avaliable
     attr_reader :secret_code
 
     def initialize
@@ -60,7 +60,7 @@ module Codebreaker
     end
 
     def process_hint
-      return 'no_hint' unless @hint_avaliable
+      return 'no hint' unless @hint_avaliable
       @hint_avaliable = false
       formated_hint
     end
