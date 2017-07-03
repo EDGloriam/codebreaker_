@@ -1,0 +1,10 @@
+==========
+Date: 2017-06-23 23:26:28 +0300
+Player: Alina
+Won game: lose
+Spent attempts: 9
+==========
+Date: 2017-06-23 23:27:51 +0300
+Player: Alex
+Won game: won
+Spent attempts: 4
